@@ -1,0 +1,30 @@
+{
+  "name": "@quark-toolkit/tw-plugin-buttons",
+  "version": "0.1.0",
+  "description": "Tailwind plugin that helps to work with buttons",
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/quark-studio/tw-plugin-buttons.git"
+  },
+  "bugs": "https://github.com/quark-studio/tw-plugin-buttons/issues",
+  "main": "./dist/index.ts",
+  "types": "./dist/types/index.d.ts",
+  "scripts": {
+    "lint": "tsc --noEmit"
+  },
+  "keywords": [
+    "tw",
+    "tailwind",
+    "styling",
+    "front-end",
+    "buttons",
+    "components",
+    "quark"
+  ],
+  "author": "Sigma_",
+  "devDependencies": {
+    "tailwindcss": "^3.0.0",
+    "typescript": "^5.7.2"
+  }
+}
