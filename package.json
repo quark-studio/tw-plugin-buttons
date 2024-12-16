@@ -22,6 +22,7 @@
     "components",
     "quark"
   ],
+  "author": "Sigma_",
   "peerDependencies": {
     "tailwindcss": ">=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20"
   },
