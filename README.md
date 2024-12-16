@@ -5,14 +5,18 @@
 </p>
 
 ------
+
+<img src="https://github.com/quark-studio/tw-plugin-buttons/blob/main/screenshots/preview.png" alt="Preview">
+
+
 ## Table of Contents
 
 - [Table of Contents](#table-of-contents)
 - [Getting started](#getting-started)
   - [Installation](#installation)
   - [Enable plugin](#enable-plugin)
-  - [Usage](#usage)
-    - [Extending](#extending)
+  - [Extending](#extending)
+  - [Example](#example)
 
 ## Getting started
 
@@ -70,11 +74,9 @@ You can customize the plugin if you wish just by call `QuarkButtons` as function
 - `prefix` - Used in css exposed variables to prevent possible collisions. By default = `qk`.
 - `className` - Used as the basis for component class names. By default = `btn`.
 
-## Usage
+## Extending
 
-### Extending
-
-By default you can use predefined set of components, but you can extend / override existing buttons just by editing neccessary tailwind [theme](https://tailwindcss.com/docs/theme) configuration.
+By default you can use predefined set of components, or extend / override existing buttons just by editing neccessary tailwind [theme](https://tailwindcss.com/docs/theme) configuration.
 
 - `btnColorVariants` - Each color set in this object = new button variant with name according to object key.
 
@@ -87,3 +89,56 @@ By default contains following variants: `sm`, `lg`.
 - `btnShapeVariants` - Creates utility-classes for buttons border radius configurations.
 
 By default contains following variants: `square`, `pill`.
+
+## Example
+
+This is default theme extension provided by this plugin which adds primary button variant:
+```
+primary: {
+  boxShadow: '0 0 0 0.25rem rgba(50, 130, 250, 0.5)',
+  color: colors.white,
+  borderColor: colors.indigo[700],
+  backgroundColor: colors.indigo[600],
+  hover: {
+    backgroundColor: colors.indigo[700]
+  },
+  active: {
+    backgroundColor: colors.indigo[800],
+    borderColor: colors.indigo[800]
+  }
+}
+```
+
+Secondary variant have difference between "common" and "outline" variant which makes it corresponding to WCAG standards:
+```
+secondary: {
+  boxShadow: '0 0 0 0.25rem rgba(220, 220, 220, 0.5)',
+  color: colors.gray[800],
+  borderColor: colors.gray[300],
+  backgroundColor: colors.gray[100],
+  hover: {
+    backgroundColor: colors.gray[200]
+  },
+  active: {
+    backgroundColor: colors.gray[300],
+    borderColor: colors.gray[300]
+  },
+  outline: {
+    normal: {
+      backgroundColor: colors.gray[500],
+      borderColor: colors.gray[500]
+    },
+    hover: {
+      color: colors.white,
+      backgroundColor: colors.gray[600],
+      borderColor: colors.gray[600]
+    },
+    active: {
+      backgroundColor: colors.gray[700],
+      borderColor: colors.gray[700]
+    }
+  }
+}
+```
+
+For additional info about theme extension allowed options watch [this](https://github.com/quark-studio/tw-plugin-buttons/blob/main/dist/types/index.d.ts).
