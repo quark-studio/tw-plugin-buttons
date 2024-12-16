@@ -22,9 +22,10 @@
     "components",
     "quark"
   ],
-  "author": "Sigma_",
+  "peerDependencies": {
+    "tailwindcss": ">=3.0.0 || >= 3.0.0-alpha.1 || >= 4.0.0-alpha.20"
+  },
   "devDependencies": {
-    "tailwindcss": "^3.0.0",
     "typescript": "^5.7.2"
   }
 }
