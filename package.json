@@ -1,6 +1,6 @@
 {
   "name": "@quark-toolkit/tw-plugin-buttons",
-  "version": "0.1.2",
+  "version": "0.2.0",
   "description": "Tailwind plugin that helps to work with buttons",
   "license": "MIT",
   "repository": {
