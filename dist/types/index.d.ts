@@ -21,6 +21,16 @@ export type ColorVariants = Partial<{
       normal: ColorVariantConfig
       hover: ColorVariantConfig
       active: ColorVariantConfig
+      dark?: Partial<{
+        normal: ColorVariantConfig
+        hover: ColorVariantConfig
+        active: ColorVariantConfig
+      }>
+    }>
+    dark?: Partial<{
+      normal: ColorVariantConfig
+      hover: ColorVariantConfig
+      active: ColorVariantConfig
     }>
   }
 }>

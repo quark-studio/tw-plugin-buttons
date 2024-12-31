@@ -106,6 +106,21 @@ const createColoredButtonList = (prefix: string, className: string, variants: Co
         backgroundColor: `var(--${prefix}-${className}-active-background-color)`,
         borderColor: `var(--${prefix}-${className}-active-border-color)`,
       },
+      '&:where(.dark, .dark *), &:where([data-theme="dark"], [data-theme="dark"] *)': {
+        [`--${prefix}-${className}-background-color`]: v.dark?.normal?.backgroundColor ?? v.backgroundColor,
+        [`--${prefix}-${className}-border-color`]: v.dark?.normal?.borderColor ?? v.borderColor,
+        [`--${prefix}-${className}-color`]: v.dark?.normal?.color ?? v.color,
+      },
+      '&:where(.dark, .dark *):hover, &:where([data-theme="dark"]:hover, [data-theme="dark"]:hover *)': {
+        [`--${prefix}-${className}-hover-background-color`]: v.dark?.hover?.backgroundColor ?? v.hover?.backgroundColor ?? v.backgroundColor,
+        [`--${prefix}-${className}-hover-border-color`]: v.dark?.hover?.borderColor ?? v.hover?.borderColor ?? v.borderColor,
+        [`--${prefix}-${className}-hover-color`]: v.dark?.hover?.color ?? v.hover?.color ?? v.color,
+      },
+      '&:where(.dark, .dark *):active, &:where([data-theme="dark"]:active, [data-theme="dark"]:active *)': {
+        [`--${prefix}-${className}-active-background-color`]: v.dark?.active?.backgroundColor ?? v.active?.backgroundColor ?? v.backgroundColor,
+        [`--${prefix}-${className}-active-border-color`]: v.dark?.active?.borderColor ?? v.active?.borderColor ?? v.borderColor,
+        [`--${prefix}-${className}-active-color`]: v.dark?.active?.color?? v.active?.color ?? v.color,
+      },
     };
   });
 
@@ -141,6 +156,20 @@ const createOutlinedButtonList = (prefix: string, className: string, variants: C
         color: `var(--${prefix}-${className}-active-color)`,
         backgroundColor: `var(--${prefix}-${className}-active-background-color)`,
         borderColor: `var(--${prefix}-${className}-active-border-color)`,
+      },
+      '&:where(.dark, .dark *), &:where([data-theme="dark"], [data-theme="dark"] *)': {
+        [`--${prefix}-${className}-border-color`]: v.outline?.dark?.normal?.borderColor ?? v.outline?.normal?.borderColor ?? v.backgroundColor,
+        [`--${prefix}-${className}-color`]: v.outline?.dark?.normal?.color ?? v.outline?.normal?.color ?? v.outline?.normal?.backgroundColor ?? v.backgroundColor,
+      },
+      '&:where(.dark, .dark *):hover, &:where([data-theme="dark"]:hover, [data-theme="dark"]:hover *)': {
+        [`--${prefix}-${className}-hover-border-color`]: v.outline?.dark?.hover?.borderColor ?? v.outline?.hover?.borderColor ?? v.backgroundColor,
+        [`--${prefix}-${className}-hover-color`]: v.outline?.dark?.hover?.color ?? v.outline?.hover?.color ?? v.color,
+        [`--${prefix}-${className}-hover-background-color`]: v.outline?.dark?.hover?.backgroundColor ?? v.outline?.hover?.backgroundColor ?? v.backgroundColor,
+      },
+      '&:where(.dark, .dark *):active, &:where([data-theme="dark"]:active, [data-theme="dark"]:active *)': {
+        [`--${prefix}-${className}-active-border-color`]: v.outline?.dark?.active?.borderColor ?? v.outline?.active?.borderColor ?? v.outline?.hover?.borderColor ?? v.active?.borderColor ?? v.borderColor,
+        [`--${prefix}-${className}-active-color`]: v.outline?.dark?.active?.color ?? v.outline?.active?.color ?? v.outline?.hover?.color ?? v.active?.color ?? v.color,
+        [`--${prefix}-${className}-active-background-color`]: v.outline?.dark?.active?.backgroundColor ?? v.outline?.active?.backgroundColor ?? v.outline?.hover?.backgroundColor ?? v.active?.backgroundColor ?? v.backgroundColor,
       },
     };
   });

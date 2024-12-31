@@ -136,6 +136,20 @@ secondary: {
     active: {
       backgroundColor: colors.gray[700],
       borderColor: colors.gray[700]
+    },
+    dark: {
+      normal: {
+        borderColor: colors.gray[400],
+        color: colors.gray[400]
+      },
+      hover: {
+        backgroundColor: colors.gray[500],
+        borderColor: colors.gray[500]
+      },
+      active: {
+        backgroundColor: colors.gray[600],
+        borderColor: colors.gray[600]
+      }
     }
   }
 }

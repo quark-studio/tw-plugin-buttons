@@ -15,6 +15,14 @@ const defaultColorVariants: ColorVariants = {
       backgroundColor: colors.indigo[800],
       borderColor: colors.indigo[800],
     },
+    outline: {
+      dark: {
+        normal: {
+          borderColor: colors.indigo[400],
+          color: colors.indigo[400],
+        },
+      },
+    },
   },
   secondary: {
     boxShadow: '0 0 0 0.25rem rgba(220, 220, 220, 0.5)',
@@ -42,6 +50,20 @@ const defaultColorVariants: ColorVariants = {
         backgroundColor: colors.gray[700],
         borderColor: colors.gray[700],
       },
+      dark: {
+        normal: {
+          borderColor: colors.gray[400],
+          color: colors.gray[400],
+        },
+        hover: {
+          backgroundColor: colors.gray[500],
+          borderColor: colors.gray[500],
+        },
+        active: {
+          backgroundColor: colors.gray[600],
+          borderColor: colors.gray[600],
+        },
+      },
     },
   },
   success: {
@@ -56,6 +78,31 @@ const defaultColorVariants: ColorVariants = {
       backgroundColor: colors.green[900],
       borderColor: colors.green[900],
     },
+    dark: {
+      normal: {
+        borderColor: colors.green[700],
+        backgroundColor: colors.green[600],
+      },
+      hover: {
+        backgroundColor: colors.green[700],
+      },
+      active: {
+        backgroundColor: colors.green[800],
+        borderColor: colors.green[800],
+      },
+    },
+    outline: {
+      dark: {
+        normal: {
+          borderColor: colors.green[500],
+          color: colors.green[500],
+        },
+        hover: {
+          backgroundColor: colors.green[600],
+          borderColor: colors.green[600],
+        },
+      },
+    },
   },
   danger: {
     boxShadow: '0 0 0 0.25rem rgba(225, 80, 95, 0.5)',
@@ -68,6 +115,31 @@ const defaultColorVariants: ColorVariants = {
     active: {
       backgroundColor: colors.red[900],
       borderColor: colors.red[900],
+    },
+    dark: {
+      normal: {
+        borderColor: colors.red[700],
+        backgroundColor: colors.red[600],
+      },
+      hover: {
+        backgroundColor: colors.red[700],
+      },
+      active: {
+        backgroundColor: colors.red[800],
+        borderColor: colors.red[800],
+      },
+    },
+    outline: {
+      dark: {
+        normal: {
+          borderColor: colors.red[500],
+          color: colors.red[500],
+        },
+        hover: {
+          backgroundColor: colors.red[600],
+          borderColor: colors.red[600],
+        },
+      },
     },
   },
   warning: {
